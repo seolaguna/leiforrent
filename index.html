@@ -268,8 +268,8 @@
     new BeerSlider(document.getElementById('single-slider'), { start: 100 });
 
     new TypeIt("#tag-line", {
-      speed: 75,
-      loop: true,
+      speed: 50,
+      loop: false,
       waitUntilVisible: true,
       startDelay: 500,
     })
@@ -282,10 +282,11 @@
     .delete(6)
     .type('<strong class="red">boyfriend</strong>')
     .move(1)
-    // .break({ delay: 500 })
-    // .type('<strong>I got you!</strong>')
     .pause(500)
-    .delete()
+    .break({ delay: 500 })
+    .type('<strong>I GOT YOU COVERED!</strong>')
+    .pause(500)
+    // .delete()
     .go();
   </script>
 </body>
