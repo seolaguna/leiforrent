@@ -272,6 +272,9 @@
       loop: false,
       waitUntilVisible: true,
       startDelay: 500,
+      afterComplete: function (instance) {
+        instance.destroy();
+      }
     })
     .type('Do you need a <strong>travel buddy</strong>?')
     .pause(500)
@@ -286,7 +289,6 @@
     .break({ delay: 200 })
     .type('<strong>I GOT YOU COVERED!</strong>')
     .pause(500)
-    // .delete()
     .go();
   </script>
 </body>
